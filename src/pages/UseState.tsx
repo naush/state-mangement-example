@@ -4,8 +4,8 @@ import DarumaState from '../DarumaState';
 
 import { makeStyles, } from '@material-ui/core/styles';
 
-import Daruma from '../components/Daruma';
-import Counter from '../components/Counter';
+import Daruma from '../components/use-state/Daruma';
+import Counter from '../components/use-state/Counter';
 
 const useStyles = makeStyles(theme => ({
   icon: {

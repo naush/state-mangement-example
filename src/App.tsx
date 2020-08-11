@@ -9,7 +9,7 @@ import {
   ThemeProvider,
 } from '@material-ui/core/styles';
 
-import UseState from './pages/UseState';
+import UseReducer from './pages/UseReducer';
 
 const useStyles = makeStyles(theme => ({
   app: {
@@ -33,7 +33,7 @@ function App() {
       <CssBaseline />
       <div className={classes.app}>
         <header className={classes.header}>
-          <UseState />
+          <UseReducer />
         </header>
       </div>
     </ThemeProvider>
