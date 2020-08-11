@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: theme.spacing(8),
     width: theme.spacing(11),
     height: theme.spacing(11),
+    userSelect: 'none',
   },
 }));
 
