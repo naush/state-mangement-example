@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import red from '@material-ui/core/colors/red';
 
-import DarumaState from './DarumaState';
 import theme from './theme';
 
 import {
@@ -10,8 +9,7 @@ import {
   ThemeProvider,
 } from '@material-ui/core/styles';
 
-import Daruma from './components/Daruma';
-import Counter from './components/Counter';
+import UseState from './pages/UseState';
 
 const useStyles = makeStyles(theme => ({
   app: {
@@ -26,42 +24,17 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     fontSize: 'calc(10px + 2vmin)',
   },
-  icon: {
-    width: theme.spacing(50),
-    height: theme.spacing(50),
-  },
 }));
 
 function App() {
   const classes = useStyles();
-  const [state, setState] = useState(DarumaState.PENDING);
-
-  const callback = () => {
-    if (state === DarumaState.PENDING) {
-      setState(DarumaState.STARTED);
-    } else if (state === DarumaState.STARTED) {
-      setState(DarumaState.FULFILLED);
-    } else {
-      setState(DarumaState.PENDING);
-    }
-  };
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className={classes.app}>
         <header className={classes.header}>
-          <div className={classes.icon}>
-            <Daruma
-              state={state}
-              callback={callback}
-            />
-          </div>
-          <div>
-            <Counter
-              number={state}
-            />
-          </div>
+          <UseState />
         </header>
       </div>
     </ThemeProvider>
