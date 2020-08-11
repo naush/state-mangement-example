@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import DarumaState from '../DarumaState';
+import { DarumaState, transit } from '../DarumaState';
 
 import { makeStyles, } from '@material-ui/core/styles';
 
@@ -19,13 +19,7 @@ const UseState = () => {
   const [state, setState] = useState(DarumaState.PENDING);
 
   const callback = () => {
-    if (state === DarumaState.PENDING) {
-      setState(DarumaState.STARTED);
-    } else if (state === DarumaState.STARTED) {
-      setState(DarumaState.FULFILLED);
-    } else {
-      setState(DarumaState.PENDING);
-    }
+    setState(transit(state));
   };
 
   return (

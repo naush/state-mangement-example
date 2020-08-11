@@ -1,9 +1,10 @@
 import React, { useReducer } from 'react';
 
-import DarumaState from '../DarumaState';
+import { DarumaState, transit } from '../DarumaState';
 
 import { makeStyles, } from '@material-ui/core/styles';
 
+import Actions from '../Actions';
 import Daruma from '../components/use-reducer/Daruma';
 import Counter from '../components/use-reducer/Counter';
 
@@ -15,13 +16,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const reducer = (state: DarumaState, action: any) => {
-  switch (state) {
-    case DarumaState.PENDING:
-      return DarumaState.STARTED;
-    case DarumaState.STARTED:
-      return DarumaState.FULFILLED;
+  switch (action.type) {
+    case Actions.TRANSIT:
+      return transit(state);
     default:
-      return DarumaState.PENDING;
+      throw new Error();
   }
 };
 

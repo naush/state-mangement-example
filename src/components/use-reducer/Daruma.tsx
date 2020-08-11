@@ -1,7 +1,8 @@
 import React from 'react';
 
-import DarumaState from '../../DarumaState';
+import Actions from '../../Actions';
 
+import { DarumaState } from '../../DarumaState';
 import { ReactComponent as DarumaPending } from '../../assets/DarumaPending.svg';
 import { ReactComponent as DarumaStarted } from '../../assets/DarumaStarted.svg';
 import { ReactComponent as DarumaFulfilled } from '../../assets/DarumaFulfilled.svg';
@@ -30,7 +31,7 @@ const Daruma = ({
 
   return (
     <Icon
-      onClick={dispatch}
+      onClick={() => dispatch({ type: Actions.TRANSIT })}
     />
   );
 };
