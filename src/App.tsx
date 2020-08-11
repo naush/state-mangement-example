@@ -30,8 +30,6 @@ const useStyles = makeStyles(theme => ({
     width: theme.spacing(50),
     height: theme.spacing(50),
   },
-  number: {
-  },
 }));
 
 function App() {
@@ -59,7 +57,7 @@ function App() {
               callback={callback}
             />
           </div>
-          <div className={classes.number}>
+          <div>
             <Counter
               number={state}
             />
