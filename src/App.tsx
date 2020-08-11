@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import red from '@material-ui/core/colors/red';
-import Box from '@material-ui/core/Box';
 
 import DarumaState from './DarumaState';
 import theme from './theme';
@@ -11,7 +10,8 @@ import {
   ThemeProvider,
 } from '@material-ui/core/styles';
 
-import Daruma from './Daruma';
+import Daruma from './components/Daruma';
+import Counter from './components/Counter';
 
 const useStyles = makeStyles(theme => ({
   app: {
@@ -30,13 +30,7 @@ const useStyles = makeStyles(theme => ({
     width: theme.spacing(50),
     height: theme.spacing(50),
   },
-  circle: {
-    border: '8px solid',
-    borderRadius: '50%',
-    fontWeight: 500,
-    fontSize: theme.spacing(8),
-    width: theme.spacing(11),
-    height: theme.spacing(11),
+  number: {
   },
 }));
 
@@ -65,14 +59,11 @@ function App() {
               callback={callback}
             />
           </div>
-          <Box
-            className={classes.circle}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-            {state}
-          </Box>
+          <div className={classes.number}>
+            <Counter
+              number={state}
+            />
+          </div>
         </header>
       </div>
     </ThemeProvider>
