@@ -10,7 +10,7 @@ import {
   ThemeProvider,
 } from '@material-ui/core/styles';
 
-import Daruma from './components/Daruma';
+import Daruma from './Daruma';
 
 const useStyles = makeStyles(theme => ({
   app: {
