@@ -36,11 +36,9 @@ const UseState = () => {
           callback={callback}
         />
       </div>
-      <div>
-        <Counter
-          number={state}
-        />
-      </div>
+      <Counter
+        number={state}
+      />
     </>
   );
 }
