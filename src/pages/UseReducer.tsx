@@ -1,31 +1,36 @@
 import React, { useReducer } from 'react';
 
 import Actions from '../Actions';
-import Daruma from '../components/use-reducer/Daruma';
-import Counter from '../components/use-reducer/Counter';
+import Daruma from '../components/Daruma';
+import Buttons from '../components/use-reducer/Buttons';
 
-import { DarumaState, forward } from '../DarumaState';
+import {
+  WishState,
+  forward,
+  backward,
+} from '../WishState';
 
-const reducer = (state: DarumaState, action: any) => {
+const reducer = (state: WishState, action: any) => {
   switch (action.type) {
-    case Actions.TRANSIT:
+    case Actions.FORWARD:
       return forward(state);
+    case Actions.BACKWARD:
+      return backward(state);
     default:
       throw new Error();
   }
 };
 
 const UseReducer = () => {
-  const [state, dispatch] = useReducer(reducer, DarumaState.PENDING);
+  const [state, dispatch] = useReducer(reducer, WishState.PENDING);
 
   return (
     <>
       <Daruma
         state={state}
-        dispatch={dispatch}
       />
-      <Counter
-        number={state}
+      <Buttons
+        dispatch={dispatch}
       />
     </>
   );

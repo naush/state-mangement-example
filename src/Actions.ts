@@ -1,5 +1,6 @@
 enum Actions {
-  TRANSIT,
+  FORWARD,
+  BACKWARD,
 }
 
 export default Actions;

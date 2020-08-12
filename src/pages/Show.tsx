@@ -2,8 +2,8 @@ import React from 'react';
 
 import Box from '@material-ui/core/Box';
 
-import { DarumaState, } from '../DarumaState';
-import Daruma from '../components/show/Daruma';
+import { WishState, } from '../WishState';
+import Daruma from '../components/Daruma';
 import Counter from '../components/show/Counter';
 
 const Show = () => {
@@ -18,7 +18,7 @@ const Show = () => {
         alignItems="center"
       >
         <Daruma
-          state={DarumaState.PENDING}
+          state={WishState.PENDING}
         />
         <Counter
           number={1}
@@ -30,7 +30,7 @@ const Show = () => {
         alignItems="center"
       >
         <Daruma
-          state={DarumaState.STARTED}
+          state={WishState.STARTED}
         />
         <Counter
           number={2}
@@ -42,7 +42,7 @@ const Show = () => {
         alignItems="center"
       >
         <Daruma
-          state={DarumaState.FULFILLED}
+          state={WishState.FULFILLED}
         />
         <Counter
           number={3}

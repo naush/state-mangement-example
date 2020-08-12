@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 import {
-  DarumaState,
+  WishState,
   forward,
   backward,
-} from '../DarumaState';
+} from '../WishState';
 
-import Daruma from '../components/use-state/Daruma';
+import Daruma from '../components/Daruma';
 import Buttons from '../components/use-state/Buttons';
 
 const UseState = () => {
-  const [state, setState] = useState(DarumaState.PENDING);
+  const [state, setState] = useState(WishState.PENDING);
 
   return (
     <>
