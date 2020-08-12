@@ -4,7 +4,7 @@ import Box from '@material-ui/core/Box';
 
 import { WishState, } from '../WishState';
 import Daruma from '../components/Daruma';
-import Counter from '../components/show/Counter';
+import Counter from '../components/Counter';
 
 const Show = () => {
   return (
