@@ -1,6 +1,6 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
 
+import Box from '@material-ui/core/Box';
 import BrushIcon from '@material-ui/icons/Brush';
 import UndoIcon from '@material-ui/icons/Undo';
 

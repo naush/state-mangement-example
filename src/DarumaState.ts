@@ -10,8 +10,10 @@ export const forward = (state: DarumaState) => {
       return DarumaState.STARTED;
     case DarumaState.STARTED:
       return DarumaState.FULFILLED;
-    default:
+    case DarumaState.FULFILLED:
       return DarumaState.FULFILLED;
+    default:
+      return DarumaState.PENDING;
   }
 }
 
