@@ -8,18 +8,17 @@ import { ReactComponent as DarumaFulfilled } from '../../assets/DarumaFulfilled.
 
 const useStyles = makeStyles(theme => ({
   root: {
+    width: theme.spacing(40),
     height: theme.spacing(40),
   },
 }));
 
 type DarumaProps = {
   state: DarumaState,
-  callback: () => void,
 };
 
 const Daruma = ({
   state,
-  callback,
 }: DarumaProps) => {
   const classes = useStyles();
   let Icon;
@@ -38,7 +37,6 @@ const Daruma = ({
   return (
     <Icon
       className={classes.root}
-      onClick={callback}
     />
   );
 };

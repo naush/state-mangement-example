@@ -4,12 +4,12 @@ import Actions from '../Actions';
 import Daruma from '../components/use-reducer/Daruma';
 import Counter from '../components/use-reducer/Counter';
 
-import { DarumaState, transit } from '../DarumaState';
+import { DarumaState, forward } from '../DarumaState';
 
 const reducer = (state: DarumaState, action: any) => {
   switch (action.type) {
     case Actions.TRANSIT:
-      return transit(state);
+      return forward(state);
     default:
       throw new Error();
   }

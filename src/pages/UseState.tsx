@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 
-import { DarumaState, transit } from '../DarumaState';
+import {
+  DarumaState,
+  forward,
+  backward,
+} from '../DarumaState';
 
 import Daruma from '../components/use-state/Daruma';
-import Counter from '../components/use-state/Counter';
+import Buttons from '../components/use-state/Buttons';
 
 const UseState = () => {
   const [state, setState] = useState(DarumaState.PENDING);
-
-  const callback = () => {
-    setState(transit(state));
-  };
 
   return (
     <>
       <Daruma
         state={state}
-        callback={callback}
       />
-      <Counter
-        number={state}
+      <Buttons
+        forward={() => setState(forward(state))}
+        backward={() => setState(backward(state))}
       />
     </>
   );
