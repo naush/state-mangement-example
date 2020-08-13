@@ -12,9 +12,9 @@ import {
 
 const reducer = (state: WishState, action: any) => {
   switch (action.type) {
-    case Actions.FORWARD:
+    case Actions.PAINT:
       return forward(state);
-    case Actions.BACKWARD:
+    case Actions.UNDO:
       return backward(state);
     default:
       throw new Error();

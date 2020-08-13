@@ -18,8 +18,8 @@ const UseState = () => {
         state={state}
       />
       <Buttons
-        forward={() => setState(forward(state))}
-        backward={() => setState(backward(state))}
+        paint={() => setState(forward(state))}
+        undo={() => setState(backward(state))}
       />
     </>
   );

@@ -1,6 +1,6 @@
 enum Actions {
-  FORWARD,
-  BACKWARD,
+  PAINT,
+  UNDO,
 }
 
 export default Actions;

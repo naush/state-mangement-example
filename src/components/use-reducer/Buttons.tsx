@@ -40,11 +40,11 @@ const Buttons = ({ dispatch, }: ButtonsProps) => {
     >
       <UndoIcon
         className={classes.icon}
-        onClick={() => dispatch({ type: Actions.BACKWARD })}
+        onClick={() => dispatch({ type: Actions.UNDO })}
       />
       <BrushIcon
         className={classes.icon}
-        onClick={() => dispatch({ type: Actions.FORWARD })}
+        onClick={() => dispatch({ type: Actions.PAINT })}
       />
     </Box>
   );

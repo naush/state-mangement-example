@@ -23,13 +23,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 type ButtonsProps = {
-  forward: () => void,
-  backward: () => void,
+  paint: () => void,
+  undo: () => void,
 };
 
 const Buttons = ({
-  forward,
-  backward,
+  paint,
+  undo,
 }: ButtonsProps) => {
   const classes = useStyles();
 
@@ -42,11 +42,11 @@ const Buttons = ({
     >
       <UndoIcon
         className={classes.icon}
-        onClick={backward}
+        onClick={paint}
       />
       <BrushIcon
         className={classes.icon}
-        onClick={forward}
+        onClick={undo}
       />
     </Box>
   );
