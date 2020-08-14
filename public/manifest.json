@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "state-management-exmaple",
+  "name": "State Management Example",
   "icons": [
     {
       "src": "favicon.ico",
