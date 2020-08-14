@@ -42,11 +42,11 @@ const Buttons = ({
     >
       <UndoIcon
         className={classes.icon}
-        onClick={paint}
+        onClick={undo}
       />
       <BrushIcon
         className={classes.icon}
-        onClick={undo}
+        onClick={paint}
       />
     </Box>
   );

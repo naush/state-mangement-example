@@ -10,8 +10,6 @@ export const forward = (state: WishState) => {
       return WishState.STARTED;
     case WishState.STARTED:
       return WishState.FULFILLED;
-    case WishState.FULFILLED:
-      return WishState.FULFILLED;
     default:
       return WishState.PENDING;
   }
